@@ -6,6 +6,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.macie.mobilecheckout.MainActivity">
+    <TextView
+        android:id="@+id/barcode_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
     <Button
         android:id="@+id/to_scanner_button"
@@ -13,5 +17,10 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:background="@drawable/round_button"/>
+
+    <LinearLayout
+        android:id="@+id/fragment_popup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></LinearLayout>
 
 </RelativeLayout>

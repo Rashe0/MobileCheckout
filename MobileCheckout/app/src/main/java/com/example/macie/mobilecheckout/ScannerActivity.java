@@ -1,5 +1,6 @@
 package com.example.macie.mobilecheckout;
 
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
@@ -8,6 +9,7 @@ import android.util.SparseArray;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
+import com.google.android.gms.common.api.CommonStatusCodes;
 import com.google.android.gms.vision.CameraSource;
 import com.google.android.gms.vision.Detector;
 import com.google.android.gms.vision.barcode.Barcode;
@@ -85,8 +87,9 @@ public class ScannerActivity extends AppCompatActivity {
             public void receiveDetections(Detector.Detections<Barcode> detections) {
                 final SparseArray<Barcode> barcodes = detections.getDetectedItems();
                 if(barcodes.size()>0){
-                    Barcode br = barcodes.valueAt(0);
-                    ProductFactory.createProduct(br);
+                    Intent data = new Intent();
+                    data.putExtra("barcode", barcodes.valueAt(0));
+                    setResult(CommonStatusCodes.SUCCESS, data);
                     finish();
                 }
             }
