@@ -1,4 +1,4 @@
-package com.example.macie.mobilecheckout;
+package com.example.mac.mobilecheckout;
 
 import org.junit.Test;
 

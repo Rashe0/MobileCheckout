@@ -1,4 +1,4 @@
-package com.example.macie.mobilecheckout;
+package com.example.mac.mobilecheckout;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.macie.mobilecheckout", appContext.getPackageName());
+        assertEquals("com.example.mac.mobilecheckout", appContext.getPackageName());
     }
 }
