@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MobileCheckout</string>
+    <string name="camera_denied_message">Please allow camera.</string>
 </resources>

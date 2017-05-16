@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "306628648542",
+    "firebase_url": "https://mobilecheckout-2a1ae.firebaseio.com",
+    "project_id": "mobilecheckout-2a1ae",
+    "storage_bucket": "mobilecheckout-2a1ae.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:306628648542:android:dfaa5aa0797c503c",
+        "android_client_info": {
+          "package_name": "com.example.macie.mobilecheckout"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "306628648542-669poo96upk37ti9rpuvfcokjko9kfk0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.macie.mobilecheckout",
+            "certificate_hash": "a4ff44d8e3c42cf164db0d8092de6aefcacd70a5"
+          }
+        },
+        {
+          "client_id": "306628648542-brd2fl0ndf8d37v33jaovthcadk5qefd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCr4HNuUnIAiLI0PwsbfEWxWQHgg3C9xEs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "306628648542-brd2fl0ndf8d37v33jaovthcadk5qefd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
