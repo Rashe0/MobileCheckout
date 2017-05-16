@@ -1,14 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.macie.mobilecheckout.ScannerActivity">
+    android:orientation="vertical"
+    tools:context="com.example.macie.mobilecheckout.activities.ScannerActivity">
 
     <SurfaceView
         android:id="@+id/camera_preview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
-</FrameLayout>
+
+    <ImageButton
+        android:id="@+id/go_to_scanner_button"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="64dp"
+        android:background="@drawable/round_button"
+        android:contentDescription="Scanner Button"
+        android:elevation="5dp"
+        android:foreground="@drawable/ic_camera_black_36dp"
+        android:foregroundGravity="center"
+        android:visibility="invisible"
+        android:clickable="false"/>
+
+    <ImageButton
+        android:id="@+id/scanner_go_to_basket_button"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@id/go_to_scanner_button"
+        android:layout_gravity="center"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@id/go_to_scanner_button"
+        android:background="@drawable/round_button"
+        android:elevation="5dp"
+        android:foreground="@drawable/ic_shopping_cart_black_24dp"
+        android:foregroundGravity="center"
+        android:contentDescription="Basket Button"
+        />
+</RelativeLayout>

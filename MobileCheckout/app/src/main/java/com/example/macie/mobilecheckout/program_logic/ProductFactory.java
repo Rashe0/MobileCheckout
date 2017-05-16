@@ -1,4 +1,4 @@
-package com.example.macie.mobilecheckout;
+package com.example.macie.mobilecheckout.program_logic;
 
 import android.content.Context;
 import android.content.Intent;

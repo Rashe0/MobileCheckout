@@ -1,4 +1,4 @@
-package com.example.macie.mobilecheckout;
+package com.example.macie.mobilecheckout.program_logic;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -77,5 +77,10 @@ public class Product implements Parcelable {
 
     public String getImageUrl() {
         return imageUrl;
+    }
+
+    @Override
+    public String toString() {
+        return name;
     }
 }

@@ -3,31 +3,12 @@
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:background="@color/colorPrimary">
+              android:layout_gravity="center">
 
     <ListView
         android:id="@+id/product_information"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal">
-
-        <Button
-            android:id="@+id/return_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            />
-
-        <Button
-            android:id="@+id/add_to_basket_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
-            />
-        </LinearLayout>
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
 
 </LinearLayout>

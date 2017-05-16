@@ -1,8 +1,9 @@
-package com.example.macie.mobilecheckout;
+package com.example.macie.mobilecheckout.fragments;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.BroadcastReceiver;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
@@ -12,6 +13,12 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.example.macie.mobilecheckout.R;
+import com.example.macie.mobilecheckout.adapters.ProductDetailsAdapter;
+import com.example.macie.mobilecheckout.program_logic.Product;
+import com.example.macie.mobilecheckout.program_logic.VirtualBasket;
 
 /**
  * Created by mrl on 5/13/2017.
@@ -35,11 +42,30 @@ public class PopupFragment extends DialogFragment {
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         isOperating = true;
-        Product product = getArguments().getParcelable("product");
+        final Product product = getArguments().getParcelable("product");
+        //button
 
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         // Get the layout inflater
-        builder.setTitle("Kurwa tytul");
+        builder.setTitle("Add to basket?");
+
+        builder.setPositiveButton("Add", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                VirtualBasket.getInstance().add(product);
+                Toast.makeText(getContext(), "Added to basket", Toast.LENGTH_SHORT).show();
+                dismiss();
+            }
+        });
+
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dismiss();
+            }
+        });
+
+
         LayoutInflater inflater = getActivity().getLayoutInflater();
         View view = inflater.inflate(R.layout.fragment_popup, null);
 
@@ -48,8 +74,8 @@ public class PopupFragment extends DialogFragment {
                 new ProductDetailsAdapter(getContext(), R.layout.product_details, product);
         productInfoListView.setAdapter(productDetailsAdapter);
 
-        addButton = (Button) view.findViewById(R.id.add_to_basket_button);
-        retryButton = (Button) view.findViewById(R.id.return_button);
+//        addButton = (Button) view.findViewById(R.id.add_to_basket_button);
+//        retryButton = (Button) view.findViewById(R.id.return_button);
 
         // Set the dialog layout
         builder.setView(view);

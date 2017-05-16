@@ -1,4 +1,4 @@
-package com.example.macie.mobilecheckout;
+package com.example.macie.mobilecheckout.adapters;
 
 import android.app.Activity;
 import android.content.Context;
@@ -9,6 +9,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.macie.mobilecheckout.program_logic.Product;
+import com.example.macie.mobilecheckout.R;
 import com.squareup.picasso.Picasso;
 
 /**
